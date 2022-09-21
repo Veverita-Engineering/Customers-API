@@ -56,8 +56,8 @@
 							"pm.test('Build version', () => {",
 							"    const response = pm.response.json();",
 							"    pm.expect(response).to.haveOwnProperty('build');",
-							"    pm.expect(response.artifact).eql('customers');",
-							"    pm.expect(response.version).eql(pm.variables.get('version'));",
+							"    pm.expect(response.build.artifact).eql('customers');",
+							"    pm.expect(response.build.version).eql(pm.variables.get('version'));",
 							"});"
 						],
 						"type": "text/javascript"
