@@ -51,6 +51,13 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", () => {",
 							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test('Build version', () => {",
+							"    const response = pm.response.json();",
+							"    pm.expect(response).to.haveOwnProperty('build');",
+							"    pm.expect(response.artifact).eql('customers');",
+							"    pm.expect(response.version).eql(pm.variables.get('version'));",
 							"});"
 						],
 						"type": "text/javascript"
