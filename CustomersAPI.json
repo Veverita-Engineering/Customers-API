@@ -95,7 +95,10 @@
 							"    const response = pm.response.json();",
 							"    pm.expect(response).be.be.an('array');",
 							"    pm.expect(response.length).be.to.be.above(0);",
-							"});"
+							"});",
+							"",
+							"// Wait for 3 seconds",
+							"setTimeout(() => {}, 3000);"
 						],
 						"type": "text/javascript"
 					}
